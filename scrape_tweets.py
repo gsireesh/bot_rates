@@ -88,9 +88,8 @@ def main():
     tweets = filter_valid(tweets)
     print ('Working with {} tweets'.format(len(tweets)))
 
-    text_to_images = filter_text_and_img_urls(tweets)
-    store_json(text_to_images, 'text_to_urls.json')
-    text_to_images = download_images(text_to_images)
+    text_to_urls = filter_text_and_img_urls(tweets)
+    text_to_images = download_images(text_to_urls)
     store_json(text_to_images, 'text_to_images.json')
     
 
